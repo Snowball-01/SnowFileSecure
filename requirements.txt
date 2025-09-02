@@ -1,0 +1,11 @@
+pyrofork
+TgCrypto
+motor
+aiofiles
+dnspython
+psutil
+humanize
+aiohttp
+umongo
+marshmallow==3.26.1
+pytz

@@ -1,0 +1,24 @@
+# Python cache & environment
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+
+# Local data
+downloads/
+*.log
+
+# Pyrogram / Telethon session files
+*.session
+*.session-journal
+
+# OS / Editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Optional: ignore images only if they are user-generated
+# *.jpg
+# *.png
