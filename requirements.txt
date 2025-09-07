@@ -9,3 +9,4 @@ aiohttp
 umongo
 marshmallow==3.26.1
 pytz
+python-dotenv

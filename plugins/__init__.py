@@ -94,9 +94,9 @@ HTML_PAGE = """
 </head>
 <body>
   <div class="container">
-    <h1>❆ Snowball File Store Bot ❆</h1>
+    <h1>❆ Snowball File Secure Bot ❆</h1>
     <p>Your reliable bot to store and share files permanently with a single link.</p>
-    <a href="https://t.me/SnowFileStoreBot" target="_blank" class="button">🚀 Open in Telegram</a>
+    <a href="https://t.me/SnowFileSecureBot" target="_blank" class="button">🚀 Open in Telegram</a>
     <div class="footer">Made with ❤️ by <a href="https://t.me/Snowball_Official" target="_blank" style="color:#4facfe;text-decoration:none;">Snowball</a></div>
   </div>
   <div class="wave"></div>

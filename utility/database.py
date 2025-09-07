@@ -42,7 +42,8 @@ class Database:
 
     # -------------------- Users -------------------- #
     async def add_user(self, user_id: int):
-        await self.col.insert_one(self.new_user(user_id))
+        if not await self.is_user_exist(user_id):
+            await self.col.insert_one(self.new_user(user_id))
 
     async def is_user_exist(self, user_id: int) -> bool:
         return bool(await self.col.find_one({"id": int(user_id)}))

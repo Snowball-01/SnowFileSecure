@@ -3,7 +3,7 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-env/
+env
 venv/
 
 # Local data
@@ -22,3 +22,4 @@ downloads/
 # Optional: ignore images only if they are user-generated
 # *.jpg
 # *.png
+.env

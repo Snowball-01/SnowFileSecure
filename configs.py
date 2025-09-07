@@ -1,6 +1,10 @@
 import os
 import re
 import time
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 id_pattern = re.compile(r"^.\d+$")
 
@@ -9,21 +13,19 @@ class Config(object):
     # ─── Snow Client Config ──────────────────────────────
     API_ID = int(os.environ.get("API_ID", ""))
     API_HASH = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get(
-        "BOT_TOKEN", ""
-    )
-    BOT_USERNAME = os.environ.get("BOT_USERNAME", "") # ⚠️ without (@)
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+    BOT_USERNAME = os.environ.get("BOT_USERNAME", "")  # ⚠️ without (@)
 
     # ─── Database Config ────────────────────────────────
-    DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "")) # ⚠️ must start with (-100)
+    DB_CHANNEL = int(os.environ.get("DB_CHANNEL", ""))  # ⚠️ must start with (-100)
     DATABASE_URL = os.environ.get("DATABASE_URL", "")
 
     # ─── Other Config ───────────────────────────────────
-    ADMINS = [7779673244]
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "")) # ⚠️ must start with (-100)
-    DYNAMIC_FSUB = bool(os.environ.get("DYNAMIC_FSUB", False))
-    FORCE_SUB = os.environ.get("FORCE_SUB", "") # ⚠️ SET THIS IF DYNAMIC_FSUB IS DISABLE 
-    FORCE_SUB_TEXT = os.environ.get(
+    ADMINS = [int(admin) for admin in os.environ.get("ADMINS", "").split()] if os.environ.get("ADMINS") else []
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))  # ⚠️ must start with (-100)
+    DYNAMIC_FSUB = os.environ.get("DYNAMIC_FSUB", "False").lower() == "true"
+    FORCE_SUB = os.environ.get("FORCE_SUB", "")  # ⚠️ SET THIS IF DYNAMIC_FSUB IS DISABLE 
+    FORCE_SUB_TEXT = (
         "FORCE_SUB_TEXT",
         "**⚠️ Access Denied!**\n\n"
         "> You are not a member of our __Backup Channel__.\n\n"
